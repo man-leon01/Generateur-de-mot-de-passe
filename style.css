@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ALHN-5733 - F3C82x7p49 */
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#container{
+    width: 90%;
+    max-width: 500px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 100px 50px;
+}
+
+h1 span{
+    color: #f17a2b;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 70%;
+    height: 8vh;
+    border-radius: 8px;
+}
+
+.form input{
+    padding: 12px 10px;
+    /* margin-left: 8px; */
+    border: none;
+    outline: none;
+    flex: 1;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.form ion-icon{
+    color: #fff;
+    font-weight: 900;
+    background-color: #f17a2b;
+    height: 100%;
+    padding: 0 12px;
+    font-size: 25px;
+    /* border-radius: 0 8px 8px 0; */
+    /* margin-right: 0px; */
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    margin-top: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: #f17a2b;
+    color: #fff;
+}
+
+/* Notification */
+
+.not{
+    position: absolute;
+    z-index: 1000;
+    color: green;
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 50px;
+    top: 50px;
+    background-color: #fff;
+    animation: notificate 3.5s ease-in-out;
+    display: none;
+    opacity: 0;
+}
+
+.not.erreur{
+    color: red;
+    border: 1px solid red;
+}
+
+@keyframes notificate {
+    0%{
+        opacity: 0;
+        translate: 0 -100px;
+    }
+    /* 10%{
+        opacity: 1;
+    } */
+    20%{
+        opacity: 1;
+
+        translate: 0 0;
+    }
+    80%{
+        translate: 0 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        translate: 0 -100px;
+    }
+}
+
+.check-box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0 12px 30px;
+    align-items: start;
+    justify-content: start;
+    display: none;
+}
+
+.check-box input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.check-box input:checked{
+    outline: #f17a2b 2px solid;
+}
+
+.check-box label{
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.check-box p{
+    margin-bottom: 10px;
+}
+
+.check-box div #radio-value{
+    border: #fff 1px solid;
+    text-align: center;
+    padding: 5px 6px;
+    color: #fff;
+    font-weight: bold;
+    width: 15%;
+    border: 1px solid #fff;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#display-modif{
+    /* background-color: #f17a2b; */
+    color: #333;
+}
+
+
+@media (max-width: 540px)  {
+    #container{
+        width: 100%;
+    }
+    .form{
+        display: flex;
+        width: 100%;
+    }
+    .form input{
+        width: 50%;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .form ion-icon{
+        font-size: 25px;
+    }
+    button{
+        width: 100%;
+        font-size: 18px;
+    }
+}
