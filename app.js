@@ -28,7 +28,7 @@ const allCaract = upperCase + lowerCase + digitCase + symbolCase;
 
 let password = "";
 let length = 0;
-inputValue.value = "4"
+inputValue.value = "4";
 
 inputBox.addEventListener("input", (e) => {
     // e.preventDefault();
@@ -50,7 +50,7 @@ inputValue.addEventListener("input", (e) => {
 
 displayButton.addEventListener("click", () => {
     checkBox.style.display = "block";
-    displayButton.style.display = "none"
+    displayButton.style.display = "none";
 })
 
 
