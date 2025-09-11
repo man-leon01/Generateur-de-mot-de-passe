@@ -27,25 +27,24 @@ const symbolCases = "!#$%&()*+,-./:;<=>?@[\]^_{|}~";
 const allCaract = upperCase + lowerCase + digitCase + symbolCase;
 
 let password = "";
-let length = 0;
-inputValue.value = "4";
+let length = 8;
+inputValue.value = "8";
 
 inputBox.addEventListener("input", (e) => {
     // e.preventDefault();
     e.target.value = password;
-    console.log("event");
 })
 
 inputRange.addEventListener("input", (e) => {
     inputValue.value = e.target.value;
     length = parseInt(e.target.value);
-    conditions();
+    // conditions();
 })
 
 inputValue.addEventListener("input", (e) => {
     inputRange.value = e.target.value;
     length = parseInt(e.target.value);
-    conditions();
+    // conditions();
 })
 
 displayButton.addEventListener("click", () => {
@@ -68,7 +67,6 @@ function createPassword(allCaract) {
 
 // Generate Button
 generateButton.addEventListener("click", () => {
-    length = 8;
     conditions();
 });
 
