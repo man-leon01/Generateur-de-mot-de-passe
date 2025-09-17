@@ -23,7 +23,6 @@ const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const digitCase = "0123456789";
 const symbolCase = "!#$%&*+,-./:;<=>?@\^_|~";
 const symbolCases = "!#$%&()*+,-./:;<=>?@[\]^_{|}~";
-// const allCaract = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[\]^_{|}~"
 const allCaract = upperCase + lowerCase + digitCase + symbolCase;
 
 let password = "";
@@ -31,20 +30,17 @@ let length = 8;
 inputValue.value = "8";
 
 inputBox.addEventListener("input", (e) => {
-    // e.preventDefault();
     e.target.value = password;
 })
 
 inputRange.addEventListener("input", (e) => {
     inputValue.value = e.target.value;
     length = parseInt(e.target.value);
-    // conditions();
 })
 
 inputValue.addEventListener("input", (e) => {
     inputRange.value = e.target.value;
     length = parseInt(e.target.value);
-    // conditions();
 })
 
 displayButton.addEventListener("click", () => {
@@ -112,30 +108,44 @@ allCaractere.addEventListener('change', (e) => {
     
 })
 upper.addEventListener('change', (e) => {
-    if (!e.target.checked) {
-        allCaractere.checked = false;
-        return;
-    }    
-})
-lower.addEventListener('change', (e) => {
-    if (!e.target.checked) {
-        allCaractere.checked = false;
-        return;
-    }    
-})
-digit.addEventListener('change', (e) => {
-    if (!e.target.checked) {
-        allCaractere.checked = false;
-        return;
-    }    
-})
-symbol.addEventListener('change', (e) => {
+    if(upper.checked && digit.checked && symbol.checked && lower.checked){
+        allCaractere.checked = true;
+    }
     if (!e.target.checked) {
         allCaractere.checked = false;
         return;
     }    
 })
 
+lower.addEventListener('change', (e) => {
+    if(upper.checked && digit.checked && symbol.checked && lower.checked){
+        allCaractere.checked = true;
+    }
+    if (!e.target.checked) {
+        allCaractere.checked = false;
+        return;
+    }    
+})
+
+digit.addEventListener('change', (e) => {
+    if(upper.checked && digit.checked && symbol.checked && lower.checked){
+        allCaractere.checked = true;
+    }
+    if (!e.target.checked) {
+        allCaractere.checked = false;
+        return;
+    }    
+})
+
+symbol.addEventListener('change', (e) => {
+    if(upper.checked && digit.checked && symbol.checked && lower.checked){
+        allCaractere.checked = true;
+    }
+    if (!e.target.checked) {
+        allCaractere.checked = false;
+        return;
+    }    
+})
 
 
 // CONDITIONS
